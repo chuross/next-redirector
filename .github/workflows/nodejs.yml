@@ -22,6 +22,8 @@ jobs:
         run: npm ci
       - name: build and export
         run: npm run export:static
+      - name: add .nojekyll
+        run: touch out/.nojekyll
       - name: publish github pages
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
